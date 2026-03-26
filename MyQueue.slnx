@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="ConsoleApp1/ConsoleApp1.csproj" Id="bcac95b3-c9ab-4c78-9807-f0428f4e7c25" />
+  <Project Path="MyBinaryTreeProj/MyBinaryTreeProj.csproj" Id="71c4ead5-e2a2-486a-9ea1-a86785bbd80e" />
+  <Project Path="MyHashingProj/MyHashingProj.csproj" Id="c874073f-a0bf-4892-83aa-8faf1ca0984e" />
+  <Project Path="MyLinkedListProj/MyLinkedListProj.csproj" />
+  <Project Path="MyQueue/MyQueueProj.csproj" />
+  <Project Path="MyStackProj/MyStackProj.csproj" Id="10eed037-d052-4a19-84a5-2cc2b3d3c37e" />
+</Solution>
