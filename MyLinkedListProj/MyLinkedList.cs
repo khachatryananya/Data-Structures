@@ -54,6 +54,38 @@ public class Mylinkedlist<T> : ICollection<T>
         }
     }
 
+    public void AddBefore(MylinkedNode<T> current, T item)
+    {
+        if (current == null)
+            throw new ArgumentNullException(nameof(current));
+
+        var newNode = new MylinkedNode<T>(item);
+
+
+        if (current == Head)
+        {
+            AddFirst(newNode);
+            return;
+        }
+
+
+        var prev = Head;
+
+        while (prev != null && prev.Next != current)
+        {
+            prev = prev.Next;
+        }
+
+        if (prev == null)
+            throw new InvalidOperationException("Node not found in the list.");
+
+
+        prev.Next = newNode;
+        newNode.Next = current;
+
+        Count++;
+    }
+
     public bool Remove(T item)
     {
         throw new NotImplementedException();
@@ -149,5 +181,7 @@ public class Mylinkedlist<T> : ICollection<T>
         Tail = current;
         Count--;
     }
+
     #endregion
+
 }

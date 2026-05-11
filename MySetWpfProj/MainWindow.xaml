@@ -1,0 +1,19 @@
+﻿<Window x:Class="MySetWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MySetWpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid RenderTransformOrigin="0.498,0.575">
+        <ComboBox HorizontalAlignment="Left" Margin="31,50,0,0" Name="LeftSet"  VerticalAlignment="Top" Width="150" SelectionChanged="leftSet_SelectionChanged"/>
+        <ComboBox HorizontalAlignment="Left" Margin="231,50,0,0" Name="Operation" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.491,-0.968" SelectionChanged="ComboBox_SelectionChanged"/>
+        <ComboBox HorizontalAlignment="Left" Margin="431,50,0,0" Name="RightSet" VerticalAlignment="Top" Width="150"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="631,50,0,0" Name="EvaluateButton" VerticalAlignment="Top" RenderTransformOrigin="0.525,-0.775" Height="22" Width="150"/>
+        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="31,100,619,37" Name="LeftMember" SelectionChanged="ListBox_SelectionChanged"/>
+        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="431,100,219,37" Name="RightMember" RenderTransformOrigin="1.919,0.492"/>
+        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="241,100,400,37" Name="ResultSet"/>
+
+    </Grid>
+</Window>
