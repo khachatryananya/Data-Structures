@@ -1,4 +1,6 @@
 <Solution>
+  <Project Path="ClassLibrary1/MyMergeSortProj.csproj" Id="0c40b500-8b44-4096-abe6-190e57242be2" />
+  <Project Path="ClassLibrary2/MyQuickSortProj.csproj" Id="4efbed4b-da58-4bfc-b926-1960962f0dfc" />
   <Project Path="ConsoleApp1/ConsoleApp1.csproj" Id="bcac95b3-c9ab-4c78-9807-f0428f4e7c25" />
   <Project Path="MyBinaryTreeProj/MyBinaryTreeProj.csproj" Id="71c4ead5-e2a2-486a-9ea1-a86785bbd80e" />
   <Project Path="MyBubbleSortProj/MyBubbleSortProj.csproj" Id="ebe11a4e-240e-4d54-a00c-62e3a5d31354" />
@@ -8,6 +10,7 @@
   <Project Path="MyLinkedListProj/MyLinkedListProj.csproj" />
   <Project Path="MyPriorityQueueProj/MyPriorityQueueProj.csproj" Id="95b8586b-519e-4b90-9b79-0894c8e469e8" />
   <Project Path="MyQueue/MyQueueProj.csproj" />
+  <Project Path="MySelectionSortProj/MySelectionSortProj.csproj" Id="8ad63701-1048-4a2e-b29e-4bab720e84ad" />
   <Project Path="MySetProj/MySetProj.csproj" Id="6eb707c9-21b2-4d79-a9a5-b76eff4450b6" />
   <Project Path="MySetWpfProj/MySetWpfProj.csproj" Id="45953a12-0de2-4c0a-9028-07463771e95e" />
   <Project Path="MyStackProj/MyStackProj.csproj" Id="10eed037-d052-4a19-84a5-2cc2b3d3c37e" />

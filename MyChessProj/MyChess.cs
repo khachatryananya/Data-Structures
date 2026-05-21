@@ -1,6 +1,6 @@
 ﻿using System;
 
-class Program
+class MyChess
 {
     static void Main()
     {
@@ -11,6 +11,10 @@ class Program
         Console.WriteLine(PrintRook(2, 4, 3, 7));
         Console.WriteLine();
         Console.WriteLine(PrintKnight(1, 2, 5, 8));
+        Console.WriteLine();
+        Console.WriteLine(CanBishopMove(3, 2, 4, 3  ));
+        Console.WriteLine();
+        Console.WriteLine(CanBishopMoveWithObstacles);
     }
 
     #region Diaganal
@@ -100,4 +104,28 @@ class Program
     }
     #endregion Knight
 
+    static bool CanBishopMove(int x0, int x1, int y0, int y1)
+    {
+        if (x0 == y0 && x1 == y1) return false;
+        return Math.Abs(x0 - y0) == Math.Abs(x1 - y1);
+    }
+    static bool CanBishopMoveWithObstacles(int startRow, int startCol, int targetRow, int targetCol, int[,] board)
+    {
+        if (!CanBishopMove(startRow, startCol, targetRow, targetCol)) return false;
+        int rowStep = (targetRow > startRow) ? 1 : -1;
+        int colStep = (targetCol > startCol) ? 1 : -1;
+        int currentRow = startRow + rowStep;
+        int currentCol = startCol + colStep;
+
+        while (currentRow != targetRow && currentCol != targetCol)
+        {
+            if (board[currentRow, currentCol] != 0) return false;
+            currentRow += rowStep;
+            currentCol += colStep;
+        }
+        return true;
+    }
 }
+
+
+
