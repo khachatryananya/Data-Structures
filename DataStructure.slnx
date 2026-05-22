@@ -5,7 +5,7 @@
   <Project Path="MyBinaryTreeProj/MyBinaryTreeProj.csproj" Id="71c4ead5-e2a2-486a-9ea1-a86785bbd80e" />
   <Project Path="MyBubbleSortProj/MyBubbleSortProj.csproj" Id="ebe11a4e-240e-4d54-a00c-62e3a5d31354" />
   <Project Path="MyChessProj/MyChessProj.csproj" Id="adc36798-d436-4070-94dc-0a0cedd0e5e3" />
-  <Project Path="MyHashingProj/MyHashingProj.csproj" Id="c874073f-a0bf-4892-83aa-8faf1ca0984e" />
+  <Project Path="MyHashingProj/MyHashTableProj.csproj" Id="c874073f-a0bf-4892-83aa-8faf1ca0984e" />
   <Project Path="MyInsertionSortProj/MyInsertionSortProj.csproj" Id="6afc62b2-2806-45a2-8e11-7e6e60f3248e" />
   <Project Path="MyLinkedListProj/MyLinkedListProj.csproj" />
   <Project Path="MyPriorityQueueProj/MyPriorityQueueProj.csproj" Id="95b8586b-519e-4b90-9b79-0894c8e469e8" />

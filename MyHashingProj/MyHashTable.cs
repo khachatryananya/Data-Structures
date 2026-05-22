@@ -1,6 +1,6 @@
-﻿namespace HashTableProj;
+﻿namespace MyHashTableProj;
 
-internal class Program
+internal class MyHashTable
 {
     private static void Main()
     {

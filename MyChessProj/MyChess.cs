@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 
 class MyChess
 {
@@ -103,11 +104,49 @@ class MyChess
 
     }
     #endregion Knight
-
-    static bool CanBishopMove(int x0, int x1, int y0, int y1)
+    static int GetKnightMinSteps(int x0, int y0, int x1, int y1)
     {
-        if (x0 == y0 && x1 == y1) return false;
-        return Math.Abs(x0 - y0) == Math.Abs(x1 - y1);
+        int[] dx = { 2, 2, -2, -2, 1, 1, -1, -1 };
+        int[] dy = { 1, -1, 1, -1, 2, -2, 2, -2 };
+
+        Queue<(int x, int y, int dist)> queue = new Queue<(int, int, int)>();
+        queue.Enqueue((x0, y0, 0));
+
+        bool[,] visited = new bool[9, 9];
+        visited[x0, y0] = true;
+
+        while (queue.Count > 0)
+        {
+            var current = queue.Dequeue();
+
+            if (current.x == x1 && current.y == y1)
+                return current.dist;
+
+            for (int i = 0; i < 8; i++)
+            {
+                int nextX = current.x + dx[i];
+                int nextY = current.y + dy[i];
+
+                if (nextX >= 1 && nextX <= 8 &&
+                    nextY >= 1 && nextY <= 8 &&
+                    !visited[nextX, nextY])
+                {
+                    visited[nextX, nextY] = true;
+                    queue.Enqueue((nextX, nextY, current.dist + 1));
+                }
+            }
+        }
+
+        return -1;
+    }
+
+
+    static bool CanBishopMove(int x0, int y0, int x1, int y1)
+    {
+        if (x0 == x1 && y0 == y1)
+            return false;
+
+        return Math.Abs(x0 - x1) ==  Math.Abs(y0 - y1);
     }
     static bool CanBishopMoveWithObstacles(int startRow, int startCol, int targetRow, int targetCol, int[,] board)
     {
